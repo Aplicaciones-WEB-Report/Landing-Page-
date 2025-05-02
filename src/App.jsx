@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import MainSection from './pages/home/MainSection';
 import ContentService from './pages/Servicios/ContentService';
@@ -10,11 +10,10 @@ import Membresia from './pages/Planes/Membresia';
 
 
 function App() {
- 
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
-      
+
       <Routes>
         <Route path="/" element={<MainSection />} />
         <Route path="/Home" element={<MainSection />} />
@@ -25,7 +24,9 @@ function App() {
         <Route path="/Planes" element={<Membresia />} />
       </Routes>
       
-    </BrowserRouter>
-  ); 
+    </Router>
+  );
 }
-export default App
+
+export default App;
+
