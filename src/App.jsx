@@ -14,7 +14,9 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      
       <Routes>
+        <Route path="/" element={<MainSection />} />
         <Route path="/Home" element={<MainSection />} />
         <Route path="/servicios" element={<ContentService />} />
         <Route path="/Sobre-nosotros" element={<AboutPage />} />
