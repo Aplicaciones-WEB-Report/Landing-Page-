@@ -13,18 +13,22 @@ function Testimonio() {
     }, []);
 
     return (
-        <div className={`absolute w-full h-screen mt-0.5 bg-[#85C872] transition-opacity duration-1000 transform ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
-            <div className="absolute top-[25px] left-0 w-140 h-[30px] bg-[#285A84]"></div>
-            <div className="absolute top-[20px] left-[63%] w-[37%] h-[9px] bg-[#285A84]"></div>
-            <div className="absolute top-[38px] left-[63%] w-[37%] h-[9px] bg-[#285A84]"></div>
-            <div className="absolute top-[56px] left-[63%] w-[37%] h-[9px] bg-[#285A84]"></div>
-            
-
-            <div className="text-center mt-4 text-[#285A84] text-5xl" style={{ textShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)', color: '#285A84', fontFamily: 'Poppins' }}>
-                <h1>Testimonios</h1>
+        <div className={`mt-0.5 w-full bg-[#85C872] transition-opacity duration-1000 transform ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+            <div className="relative pt-12 pb-5 px-4 md:px-16">
+                <div className="flex items-center justify-between">
+                    <div className="md:w-120 w-15 h-[30px] bg-[#285A84]"></div>
+                    <div className="flex flex-col gap-2 md:w-[37%] w-[20%] ">
+                        <div className="h-[9px] bg-[#285A84]"></div>
+                        <div className="h-[9px] bg-[#285A84]"></div>
+                        <div className="h-[9px] bg-[#285A84]"></div>
+                    </div>
+                </div>
+                <h1 className="text-center -mt-10 md:-mt-12 text-[#285A84] text-4xl md:text-5xl font-bold" style={{ textShadow: '2px 2px 5px rgba(0,0,0,0.3)', fontFamily: 'Poppins' }}>
+                    Testimonios
+                </h1>
             </div>
-            
-            <div className="flex justify-around mt-28">
+
+            <div className="flex flex-col items-center justify-center gap-10 mt-16 px-4 md:flex-row md:justify-around md:px-10">
                 <UsuariosT
                     nombre="María G."
                     cargo="CEO"
@@ -32,7 +36,7 @@ function Testimonio() {
                     imagen={userTestmonio1}
                 />
                 <UsuariosT
-                    nombre="Fernando Flores."
+                    nombre="Fernando Flores"
                     cargo="Postulante"
                     mensaje="Envié mi perfil y en menos de una semana ya tenía entrevistas agendadas."
                     imagen={userTestimonio2}
@@ -43,8 +47,9 @@ function Testimonio() {
                     mensaje="El sistema de matching nos conecta con candidatos realmente calificados."
                     imagen={userTestimonio3}
                 />
-                <div className="absolute top-[720px] left-0 w-full h-[120px] bg-[#285A84]"></div>
             </div>
+
+            <div className="w-full h-[100px] bg-[#285A84] mt-40"></div>
         </div>
     );
 }
